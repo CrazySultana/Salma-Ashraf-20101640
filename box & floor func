@@ -1,0 +1,56 @@
+void box(){
+glPushMatrix();
+glTranslatef(0,5+qx,1);
+glScalef(1,1,1);
+glBegin (GL_QUADS) ;
+
+    glColor3f(1.0,0.0,0.0);
+    glVertex3f(-1.0,1.5,1.0);
+    glVertex3f(-1.0,-1.5,1.0);
+    glVertex3f(1.0,-1.5,1.0);
+    glVertex3f(1.0,1.5,1.0);
+
+
+    glVertex3f(1.0,1.5,-1.0);
+    glVertex3f(1.0,-1.5,-1.0);
+    glVertex3f (-1.0,-1.5,-1.0);
+    glVertex3f(-1.0,1.5,-1.0);
+
+
+    glVertex3f(1.0,1.5,1.0);
+    glVertex3f(1.0,-1.5,1.0);
+    glVertex3f(1.0,-1.5,-1.0);
+    glVertex3f(1.0,1.5,-1.0);
+
+
+    glVertex3f(-1.0,1.5,-1.0);
+    glVertex3f(-1.0,-1.5,-1.0);
+    glVertex3f(-1.0,-1.5,1.0);
+    glVertex3f(-1.0,1.5,1.0);
+
+
+    glVertex3f (-1.0,1.5,-1.0);
+    glVertex3f (-1.0,1.5,1.0);
+    glVertex3f(1.0,1.5,1.0);
+    glVertex3f(1.0,1.5,-1.0);
+
+
+    glVertex3f (-1.0,-1.5,-1.0);
+    glVertex3f(-1.0,-1.5,1.0);
+    glVertex3f(1.0,-1.5,1.0);
+    glVertex3f(1.0,-1.5,-1.0);
+
+    glEnd();
+
+
+glPopMatrix();
+}
+void floor()
+{
+    glPushMatrix();
+    glTranslatef(1,-1,1);
+    glScalef(40,2,50);
+    glColor3f(0.7,0.7,1);
+    glutSolidCube(0.6);
+    glPopMatrix();
+}
