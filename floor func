@@ -1,0 +1,9 @@
+void floor()
+{
+    glPushMatrix();
+    glTranslatef(1,-1,1);
+    glScalef(40,2,50);
+    glColor3f(0.7,0.7,1);
+    glutSolidCube(0.6);
+    glPopMatrix();
+}
