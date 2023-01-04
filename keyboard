@@ -1,0 +1,20 @@
+#include <GL/gl.h>
+#include <GL/glu.h>
+#include <GL/glut.h>
+
+#include <stdlib.h>
+#include <windows.h>
+#include <math.h>
+float zRotated,qx=0,qy=0,qz=0,rx=0,ry=0,rz=0;
+
+void keyboard(unsigned char Key,int x,int y)
+    {
+   if(Key=='w'){qx+=0.1;} if(Key=='s'){qx-=0.1;}//forward and back   moving
+    if(Key=='d'){qz+=0.1;} if(Key=='a'){qz-=0.1;}//left and right    moving
+     if(Key=='W'){qx+=0.1;} if(Key=='S'){qx-=0.1;}//forward and back   moving
+    if(Key=='D'){qz+=0.1;} if(Key=='A'){qz-=0.1;}//left and right    moving
+    if(Key=='8'){rz-=10;} if(Key=='2'){rz+=10;}//forward and back // angle
+    if(Key=='4'){rx-=10;} if(Key=='6'){rx+=10;}//left and right   // angle
+
+    glutPostRedisplay();
+    }
