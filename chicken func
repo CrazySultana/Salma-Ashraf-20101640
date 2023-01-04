@@ -1,0 +1,110 @@
+//------------------------------  display   -------------------------------
+//GLfloat zRotated=0.0f;
+int refreshMills = 15;
+void chicken()
+{
+//body
+glColor3f(1,1,0);
+glTranslatef    (0+qz, 0.35, 0);
+glutSolidSphere (1, 50, 50);
+glTranslatef    (0+qz, 1.5 ,0);
+glutSolidSphere (0.7, 50, 50);
+
+//peak
+glColor3f(1,0.5,0);
+glTranslatef(0+qz, 0 ,0.5);
+glScalef(0.2,0.5,0.3);
+glutSolidCone(0.5,3,3,35);
+
+//eyes
+glPushMatrix();
+glColor3f(0,0,0);
+glTranslatef    (-1.7+qz, 0.7, 0.3);
+glutSolidSphere (0.2, 50, 50);
+
+glColor3f(0,0,0);
+glTranslatef    (3+qz,0, 0.2);
+glutSolidSphere (0.2, 50, 50);
+glPopMatrix();
+
+//wing
+glColor3f(1,1,0);
+glTranslatef(5+qz,-2.5,-0.5);
+
+glBegin(GL_TRIANGLES);
+
+
+      // Front
+
+      glVertex3f( 0.0f+qz, 1.0f, 0.0f);
+
+      glVertex3f(-1.0f+qz, -1.0f, 1.0f);
+
+      glVertex3f(1.0f+qz, -1.0f, 1.0f);
+
+      // Right
+
+      glVertex3f(0.0f+qz, 1.0f, 0.0f);
+
+      glVertex3f(1.0f+qz, -1.0f, 1.0f);
+
+      glVertex3f(1.0f+qz, -1.0f, -1.0f);
+
+      // Back
+
+      glVertex3f(0.0f+qz, 1.0f, 0.0f);
+
+      glVertex3f(1.0f+qz, -1.0f, -1.0f);
+
+      glVertex3f(-1.0f+qz, -1.0f, -1.0f);
+
+      // Left
+      glVertex3f( 0.0f+qz, 1.0f, 0.0f);
+             //
+      glVertex3f(-1.0f+qz,-1.0f,-1.0f);
+
+      glVertex3f(-1.0f+qz,-1.0f, 1.0f);
+   glEnd();   // Done drawing the pyramid
+
+
+
+   glColor3f(1,1,0);
+glTranslatef(-10+qz,0,-0.5);
+glBegin(GL_TRIANGLES);
+
+
+      // Front
+
+      glVertex3f( 0.0f, 1.0f, 0.0f);
+
+      glVertex3f(-1.0f, -1.0f, 1.0f);
+
+      glVertex3f(1.0f, -1.0f, 1.0f);
+
+      // Right
+
+      glVertex3f(0.0f, 1.0f, 0.0f);
+
+      glVertex3f(1.0f, -1.0f, 1.0f);
+
+      glVertex3f(1.0f, -1.0f, -1.0f);
+
+      // Back
+
+      glVertex3f(0.0f, 1.0f, 0.0f);
+
+      glVertex3f(1.0f, -1.0f, -1.0f);
+
+      glVertex3f(-1.0f, -1.0f, -1.0f);
+
+      // Left
+      glVertex3f( 0.0f, 1.0f, 0.0f);
+             //
+      glVertex3f(-1.0f,-1.0f,-1.0f);
+
+      glVertex3f(-1.0f,-1.0f, 1.0f);
+   glEnd();
+
+    glPopMatrix ();
+
+}
