@@ -1,0 +1,24 @@
+//----------------------------------  main  ------------------------------------
+
+
+int main (int argc, char **argv)
+{
+    glutInit               (&argc, argv);
+    glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH);
+    glutInitWindowSize     (800, 700);
+    glutInitWindowPosition (700, 200);
+    glutCreateWindow       ("20101640");
+
+    glClearColor (1.0, 1.0, 1.0, 0.0);
+     glutKeyboardFunc(keyboard);
+    glutMouseFunc(onMouseClick);
+    glutDisplayFunc (display);
+    glutReshapeFunc (reshapeFunc);
+    glutIdleFunc    (idleFunc);
+
+    glClearColor(1,1,1,1);
+    texture();
+
+ glutTimerFunc(1000, timer, 0);
+    glutMainLoop();
+}
