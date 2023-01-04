@@ -15,7 +15,3 @@ chicken();
 
     glutSwapBuffers();
 }
-void timer(int value) {
-   glutPostRedisplay();      // Post re-paint request to activate display()
-   glutTimerFunc(refreshMills, timer, 0); // next timer call milliseconds later
-}
